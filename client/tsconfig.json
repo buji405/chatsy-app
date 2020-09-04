@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "allowJs": true,
+      "skipLibCheck": false,
+      "types": [
+        "async",
+        "enzyme",
+        "enzyme-adapter-react-16",
+        "graphql",
+        "jest",
+        "lodash",
+        "node",
+        "react",
+        "react-dates",
+        "react-dom",
+        "react-router-dom",
+        "react-select",
+        "recharts",
+        "storybook__addon-actions",
+        "storybook__react",
+        "styled-components"
+      ],
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": false,
+      "noEmit": true,
+      "jsx": "react",
+      "baseUrl": "./",
+      "outDir": "./static/",
+      "paths": {
+        "choozle-styled-components": ["src/willow/styled-components"],
+        "helpers/*": ["src/helpers/*"],
+        "testing/*": ["src/testing/*"],
+        "Willow/*": ["src/willow/components/*"],
+        "StyleConfig/*": ["src/willow/*"]
+      }
+    },
+    "include": ["src", "index.d.ts"],
+    "exclude": [
+      "src/**/*.spec.ts",
+      "src/**/*.spec.tsx",
+      "dist",
+      "node_modules",
+      "src/**/*.spec.js",
+      "src/**/*.spec.jsx"
+    ]
+  }
