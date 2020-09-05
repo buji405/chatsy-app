@@ -1,19 +1,36 @@
+.sign-in-container {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    width: 40%;
+  }
 
+  .input-conatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  
 
 /* sign in button styling */
-.sign-in {
-    height: 40px;
-    cursor:pointer;
+.sign-in-btn {
+  height: 40px;
+  cursor: pointer;
 }
 
-.sign-in:disabled {
-   cursor: not-allowed;
+.sign-in-btn:disabled {
+  cursor: not-allowed;
 }
 
-.sign-in:hover:not(:disabled) {
-    background: #078377;
-    border: #078377;
-    color: #fff;
-    transition: background .2s linear;
+.sign-in-btn:hover:not(:disabled) {
+  background: #078377;
+  border: #078377;
+  color: #fff;
+  transition: background 0.2s linear;
 }
+
+
 

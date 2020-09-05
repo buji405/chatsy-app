@@ -1,0 +1,36 @@
+.chat-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.main {
+  background: #fff;
+  height: 350px;
+  padding-top: 30px;
+  position: relative;
+  width: 500px;
+  overflow: auto;
+  box-shadow: 4px 0px 5px #d3d3d3;
+}
+
+.input-btn-container {
+  display: flex;
+  position: absolute;
+  bottom: 115px;
+  height: 40px;
+  width: 100%;
+}
+
+.send-btn {
+  height: 100%;
+  width: 80px;
+}
+
+.send-btn:hover {
+  background: #078377;
+  border: #078377;
+  color: #fff;
+  transition: background 0.2s linear;
+}

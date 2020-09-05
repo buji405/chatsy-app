@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import ChatInput from "../chatInput/ChatInput";
 import SignInModal from "../signInModal/SignInModal";
 import Messages from "../messages/Messages";
 import io from "socket.io-client";
+
+import "./Chatsy.css";
 
 let socket;
 
@@ -34,30 +37,26 @@ const Chatsy = () => {
   };
 
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-     
+    <div className="chat-container">
       {!isModalOpen ? (
-        <div style={{ height: "50%", background: "white", width: "50%", position: "relative" }}>
-             {userName && !messages.length && <b>Hello, {userName}!</b>}
-          <div>
-            <Messages messages={messages} userName={userName} />
-            <div   style={{position: "absolute",
-                bottom: "0", height: "40px", width: "100%"}}>
-            <input
-          style={{height: "100%", width: "90%"}}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyPress={(e) => (e.key === "Enter" ? sendMessage(e) : null)}
-            />
-            <button style={{height: "100%", width: "10%"}}onClick={(e) => sendMessage(e)}>Send</button>
+        <div>
+          <div className="main">
+            {userName && !messages.length && (
+              <b style={{ marginLeft: "10px" }}>Hello, {userName}!</b>
+            )}
+            <div>
+              <Messages messages={messages} userName={userName} />
             </div>
+          </div>
+          <div className="input-btn-container">
+            <ChatInput
+              message={message}
+              sendMessage={sendMessage}
+              setMessage={setMessage}
+            />
+            <button className="send-btn" onClick={(e) => sendMessage(e)}>
+              Send
+            </button>
           </div>
         </div>
       ) : (

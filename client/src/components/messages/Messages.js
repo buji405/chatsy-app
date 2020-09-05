@@ -4,7 +4,7 @@ import Message from "../message/Message";
 
 const Messages = ({ messages , userName}) => {
   return (
-    <div style={{overflow: "auto"}}>
+    <div>
       {messages?.length
         ? messages.map((message, i) => {
             return (
