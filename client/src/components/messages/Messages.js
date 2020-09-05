@@ -2,15 +2,16 @@ import React from "react";
 
 import Message from "../message/Message";
 
-const Messages = ({ messages }) => {
+const Messages = ({ messages , userName}) => {
   return (
-    <div>
+    <div style={{overflow: "auto"}}>
       {messages?.length
         ? messages.map((message, i) => {
             return (
               <Message
                 key={`message-${i}`}
                 message={message}
+                userName={userName}
               />
             );
           })

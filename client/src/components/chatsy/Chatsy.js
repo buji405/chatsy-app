@@ -44,16 +44,20 @@ const Chatsy = () => {
     >
      
       {!isModalOpen ? (
-        <div style={{ height: "50%", background: "white", width: "50%" }}>
-             {userName && !messages.length && <div>Hello, {userName}!</div>}
+        <div style={{ height: "50%", background: "white", width: "50%", position: "relative" }}>
+             {userName && !messages.length && <b>Hello, {userName}!</b>}
           <div>
-            <Messages messages={messages} />
+            <Messages messages={messages} userName={userName} />
+            <div   style={{position: "absolute",
+                bottom: "0", height: "40px", width: "100%"}}>
             <input
+          style={{height: "100%", width: "90%"}}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyPress={(e) => (e.key === "Enter" ? sendMessage(e) : null)}
             />
-            <button onClick={(e) => sendMessage(e)}>Send</button>
+            <button style={{height: "100%", width: "10%"}}onClick={(e) => sendMessage(e)}>Send</button>
+            </div>
           </div>
         </div>
       ) : (

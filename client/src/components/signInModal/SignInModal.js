@@ -10,7 +10,7 @@ const SignInModal = ({ setUserName, setIsModalOpen }) => {
   };
 
   return (
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center", background: "#fff", width: "40%", height: "350px",}}>
+    <div style={{display: "flex", justifyContent: "center", alignItems: "center", background: "#fff", width: "40%", height: "350px"}}>
       <div>
       <h1 style={{margin: "2px"}}>Welcome to Chatsy!</h1>
     <hr size="5" style={{background:"#078377"}}/>
