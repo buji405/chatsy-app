@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
+import io from "socket.io-client";
 import ChatInput from "../chatInput/ChatInput";
 import SignInModal from "../signInModal/SignInModal";
 import Messages from "../messages/Messages";
-import io from "socket.io-client";
-
 import "./Chatsy.css";
 
 let socket;

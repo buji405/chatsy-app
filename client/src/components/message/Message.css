@@ -9,10 +9,11 @@
   align-items: center;
   border-radius: 5px;
   display: flex;
-  height: 40px;
+  height: auto;
   margin-left: 5px;
   padding: 4px;
   width: fit-content;
+  max-width: 235px;
 }
 
 .current-user {

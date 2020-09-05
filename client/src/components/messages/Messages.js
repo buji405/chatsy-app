@@ -1,8 +1,7 @@
 import React from "react";
-
 import Message from "../message/Message";
 
-const Messages = ({ messages , userName}) => {
+const Messages = ({ messages, userName }) => {
   return (
     <div>
       {messages?.length
