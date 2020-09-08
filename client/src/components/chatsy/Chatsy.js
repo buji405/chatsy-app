@@ -28,7 +28,6 @@ const Chatsy = () => {
   }, [messages]);
 
   const sendMessage = (event) => {
-    //prevent from refreshing page on send.
     event.preventDefault();
     if (message) {
       socket.emit("sendMessage", { userName, message }, () => setMessage(""));
